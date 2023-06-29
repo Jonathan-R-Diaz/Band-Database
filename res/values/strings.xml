@@ -6,11 +6,18 @@
         <item>The Beatles</item>
         <item>Nirvana</item>
         <item>U2</item>
+        <item>Guns \'n Roses</item>
+        <item>Offspring</item>
+        <item>Metallica</item>
+        <!-- When you add more bands than it can fit, they just get cut off -->
     </string-array>
 
     <string-array name="descriptions">
         <item>An English rock band that formed in Liverpool in 1960.</item>
         <item>An American rock band that formed in Washington in 1987.</item>
         <item>An Irish rock band from Dublin that formed in 1976.</item>
+        <item>American hard rock band from Los Angeles, California, formed in 1985</item>
+        <item>The Offspring has been labeled primarily as punk rock, and punk subgenres including hardcore punk, melodic hardcore, pop-punk, and skate punk</item>
+        <item>Metallica is an American heavy metal band that developed the subgenre of speed metal in the early and mid-1980s.</item>
     </string-array>
 </resources>
