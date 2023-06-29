@@ -27,8 +27,15 @@ public class ListFragment extends Fragment {
             Bundle args = new Bundle();
             args.putInt(DetailFragment.ARG_BAND_ID, selectedBandId);
 
+            View detailFragmentContainer = rootView.findViewById(R.id.detail_frag_container);
+            if (detailFragmentContainer == null) {
             // Replace list with details
             Navigation.findNavController(itemView).navigate(R.id.show_item_detail, args);
+            } else {
+                // Show details on the right
+                Navigation.findNavController(detailFragmentContainer)
+                        .navigate(R.id.fragment_detail, args);
+            }
         };
 
         // Send bands to RecyclerView
