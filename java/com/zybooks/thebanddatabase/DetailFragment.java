@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 public class DetailFragment extends Fragment {
 
+    public static final String ARG_BAND_ID = "band_id";
+
     private Band mBand;
 
     public DetailFragment() {
@@ -20,6 +22,12 @@ public class DetailFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         int bandId = 1;
+
+        // Get the band ID from the fragment arguments
+        Bundle args = getArguments();
+        if (args != null) {
+            bandId = args.getInt(ARG_BAND_ID);
+        }
 
         // Get the selected band
         mBand = BandRepository.getInstance(requireContext()).getBand(bandId);

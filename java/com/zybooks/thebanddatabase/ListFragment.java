@@ -30,10 +30,18 @@ public class ListFragment extends Fragment {
 
             // Display band's name on button
             button.setText(band.getName());
+            button.setTag(band.getId());
 
             // Navigate to detail screen when clicked
             button.setOnClickListener(buttonView -> {
-                Navigation.findNavController(buttonView).navigate(R.id.show_item_detail);
+
+                // Create fragment arguments containing the selected band ID
+                int selectedBandId = (int) buttonView.getTag();
+                Bundle args = new Bundle();
+                args.putInt(DetailFragment.ARG_BAND_ID, selectedBandId);
+
+                // Send band ID to DetailFragment
+                Navigation.findNavController(buttonView).navigate(R.id.show_item_detail, args);
             });
 
             // Add button to the LinearLayout
